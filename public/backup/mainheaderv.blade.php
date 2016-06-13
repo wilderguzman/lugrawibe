@@ -1,0 +1,141 @@
+<!-- Main Header -->
+<header class="main-header">
+
+    <!-- Logo -->
+     @if(Auth::check()) 
+    <a href="{{ url('/home') }}" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>S</b>PGM</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>SPG </b>&copy;Menu-Control</span>
+    </a>
+    @else 
+    <a href="{{ url('/') }}" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>S</b>PG</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>SPG </b> &copy; lugrawibe</span>
+    </a>
+    @endif 
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <!-- Navbar Right Menu -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+              <ul class="nav navbar-nav">
+
+                <li class="active"><a href="{{ url('/') }}">Facultad<span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="{{ url('carreras') }}">Carreras<span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="{{ url('autoridades') }}">Autoridad<span class="sr-only">(current)</span></a></li>
+               <li class="active"><a href="{{ url('/organigrama') }}">Organigrama<span class="sr-only">(current)</span></a></li>
+
+                 <li class="active"><a href="{{ url('/noticias') }}">Noticias<span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="{{ url('/informaciones') }}">Guia-Informaciónes<span class="sr-only">(current)</span></a></li>
+
+                
+                
+                
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ayudas<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{asset('/ayuda/man.pdf')}}" target="_blank" >Ayuda en PDF</a></li>
+                    <li><a href="{{asset('/ayuda/ayuda/index.htm')}}" target="_blank" >Ayuda web</a></li>
+                    
+                  </ul>
+                </li>
+
+              </ul>
+              
+        </div>
+
+           
+        <!-- /.navbar-collapse -->
+         
+
+         @if(Auth::check()) 
+
+            <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <!-- Messages: style can be found in dropdown.less-->
+                
+                <!-- User Account Menu -->
+                <li class="dropdown user user-menu">
+                    <!-- Menu Toggle Button -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <!-- The user image in the navbar-->
+                        <img src="{{asset('/img/user2-160x160.jpg')}}" class="user-image" alt="User Image"/>
+                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                        <span class="hidden-xs">{{ Auth::user()->name }}</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- The user image in the menu -->
+                        <li class="user-header">
+                            <img src="{{asset('/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image" />
+                            <p>
+                                {{ Auth::user()->name }}
+                                <small>{{ $variablefecha }}</small>
+                            </p>
+                        </li>
+                        <!-- Menu Body -->
+                        <li class="user-body">
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Sistema</a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Planes</a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Globales</a>
+                            </div>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="#" class="btn btn-default btn-flat">Perfil</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="{{ url('/auth/logout') }}" class="btn btn-default btn-flat">Salir</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+                <!-- Control Sidebar Toggle Button -->
+                <li>
+                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                </li>
+            </ul>
+        </div>
+
+
+        @else 
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">      
+            <li class="dropdown user user-menu">
+                            <div class="pull-center">
+                                <a href="{{ url('/auth/login') }}" class="btn btn-primary btn-xs">Ingresar</a>
+                            
+                            
+                                <a href="{{ url('/auth/register') }}" class="btn btn-primary btn-xs">Registrarse</a>
+                            </div>
+           
+            </li>
+             </ul>
+        </div>
+        @endif 
+         <div class="navbar-custom-menu" >
+              <ul class="nav navbar-nav">
+
+            
+                 <li class="active"><a href="{{ url('/lugrawibe') }}">By Lugrawibe<span class="sr-only">(current)</span></a></li>
+               
+                
+                
+               
+                <!--<li><a href="#">nada</a></li>-->
+              </ul>
+              
+        </div>
+           
+    </nav>
+</header>

@@ -1,0 +1,45 @@
+1
+ Página principal
+ index.htm
+2
+ 1. Presentacion
+ presentacion.htm
+3
+ Contenido del sistema
+ contenido_del_sistema.htm
+4
+ 2. Autentificacion
+ autentificacion.htm
+5
+ Detalle Autenticacion
+ detalle_autenticacion.htm
+6
+ 3. Departamento
+ departamento.htm
+7
+ Detalle de seccion Departamento
+ detalle_de_seccion_departamento.htm
+8
+ 4. Carreras
+ carreras.htm
+9
+ Detalle de seccion Carreras
+ detalle_de_seccion_carreras.htm
+10
+ 5. Docentes
+ docentes.htm
+11
+ div control
+ div_control_1.htm
+12
+ 6. Autoridades
+ autoridades.htm
+13
+ div control
+ div_control_2.htm
+14
+ 7. Areas
+ areas.htm
+15
+ div control
+ div_control_3.htm
